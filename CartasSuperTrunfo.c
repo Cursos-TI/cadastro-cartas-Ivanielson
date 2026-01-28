@@ -8,13 +8,25 @@ int main() {
     //--------------------------------------------------------- Carta 1 ----------------------------------------------------------------------------
 
     // Área para definição das variáveis para armazenar as propriedades das cidades
+
     char stateCard1; // Declara a variável para armazenar o valor de entrada do Estado
     char codeCard1[4]; // Declara a variável para armazenar o valor de entrada do Código
     char cityNameCard1[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
     int populationCard1, numberOfTouristAttractionsCard1; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
     float areaCard1, pibCard1; // Declara as variáveis para armazenar os valores de entrada da Área e PIB
 
+    //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
+
+    char stateCard2; // Declara a variável para armazenar o valor de entrada do Estado
+    char codeCard2[4]; // Declara a variável para armazenar o valor de entrada do Código
+    char cityNameCard2[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
+    int populationCard2, numberOfTouristAttractionsCard2; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
+    float areaCard2, pibCard2; // Declara as variáveis para armazenar os valores de entrada da Área e PIB
+
     // Área para entrada de dados
+
+    //--------------------------------------------------------- Carta 1 ----------------------------------------------------------------------------
+
     printf("----------------------------------------- Inciando cadastro da carta 1 ------------------------------------------------------\n");
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel stateCard1
     printf("Informe a letra de 'A' a 'H' que representa o Estado: ");
@@ -46,29 +58,8 @@ int main() {
 
     printf("\n\nCadastro Finalizado com Sucesso!\n\n");
 
-
-    // Área para exibição dos dados da cidade
-    printf("---------------------------------------- Informações cadastradas da Carta 1 ------------------------------------------------\n");
-    printf("Estado: %c\n", stateCard1); // Exibe o Estada cadastrado pelo usuário na variavel stateCard1
-    printf("Código: %s\n", codeCard1); // Exibe o Código cadastrado pelo usuário na variavel codeCard1
-    printf("Nome da Cidade: %s\n", cityNameCard1); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard1
-    printf("População: %i Habitantes\n", populationCard1); // Exibe a População cadastrado pelo usuário na variavel populationCard1
-    printf("Área: %.2fkm²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
-    printf("PIB: %.2f\n", pibCard1); // Exibe o PIB cadastrado pelo usuário na variavel pibCard1
-    printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1);  // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard1
-
-    printf("\n\n");
-
     //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
 
-    // Área para definição das variáveis para armazenar as propriedades das cidades
-    char stateCard2; // Declara a variável para armazenar o valor de entrada do Estado
-    char codeCard2[4]; // Declara a variável para armazenar o valor de entrada do Código
-    char cityNameCard2[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
-    int populationCard2, numberOfTouristAttractionsCard2; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
-    float areaCard2, pibCard2; // Declara as variáveis para armazenar os valores de entrada da Área e PIB
-
-    // Área para entrada de dados
     printf("----------------------------------------- Inciando cadastro da carta 2 ------------------------------------------------------\n");
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel stateCard2
     printf("Informe a letra de 'A' a 'H' que representa o Estado: ");
@@ -100,7 +91,24 @@ int main() {
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel numberOfTouristAttractionsCard2
     printf("\n\nCadastro Finalizado com Sucesso!\n\n");
 
+
     // Área para exibição dos dados da cidade
+
+    //--------------------------------------------------------- Carta 1 ----------------------------------------------------------------------------
+
+    printf("---------------------------------------- Informações cadastradas da Carta 1 ------------------------------------------------\n");
+    printf("Estado: %c\n", stateCard1); // Exibe o Estada cadastrado pelo usuário na variavel stateCard1
+    printf("Código: %s\n", codeCard1); // Exibe o Código cadastrado pelo usuário na variavel codeCard1
+    printf("Nome da Cidade: %s\n", cityNameCard1); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard1
+    printf("População: %i Habitantes\n", populationCard1); // Exibe a População cadastrado pelo usuário na variavel populationCard1
+    printf("Área: %.2fkm²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
+    printf("PIB: %.2f\n", pibCard1); // Exibe o PIB cadastrado pelo usuário na variavel pibCard1
+    printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1);  // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard1
+
+    printf("\n\n");
+
+    //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
+    
     printf("---------------------------------------- Informações cadastradas da Carta 2 ------------------------------------------------\n");
     printf("Estado: %c\n", stateCard2); // Exibe o Estada cadastrado pelo usuário na variavel stateCard2
     printf("Código: %s\n", codeCard2); // Exibe o Código cadastrado pelo usuário na variavel codeCard2
@@ -111,6 +119,6 @@ int main() {
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard2); // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard2
 
     printf("\n\n");
-
+    
     return 0;
 } 
