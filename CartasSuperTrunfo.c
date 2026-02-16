@@ -13,7 +13,7 @@ int main() {
     char codeCard1[4]; // Declara a variável para armazenar o valor de entrada do Código
     char cityNameCard1[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
     int populationCard1, numberOfTouristAttractionsCard1; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
-    float areaCard1, pibCard1; // Declara as variáveis para armazenar os valores de entrada da Área e PIB
+    float areaCard1, pibCard1, pibPerCapita1, populationDensity1; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional e PIB per Capita
 
     //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ int main() {
     char codeCard2[4]; // Declara a variável para armazenar o valor de entrada do Código
     char cityNameCard2[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
     int populationCard2, numberOfTouristAttractionsCard2; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
-    float areaCard2, pibCard2; // Declara as variáveis para armazenar os valores de entrada da Área e PIB
+    float areaCard2, pibCard2, pibPerCapita2, populationDensity2; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional e PIB per Capita
 
     // Área para entrada de dados
 
@@ -58,6 +58,10 @@ int main() {
 
     printf("\n\nCadastro Finalizado com Sucesso!\n\n");
 
+    // Calculo da Densidade Populacional e PIB per Capita
+    populationDensity1 = (float) populationCard1/areaCard1;
+    pibPerCapita1 = (float) pibCard1/populationCard1;
+
     //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
 
     printf("----------------------------------------- Inciando cadastro da carta 2 ------------------------------------------------------\n");
@@ -91,6 +95,9 @@ int main() {
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel numberOfTouristAttractionsCard2
     printf("\n\nCadastro Finalizado com Sucesso!\n\n");
 
+    // Calculo da Densidade Populacional e PIB per Capita
+    populationDensity2 = (float) populationCard2/areaCard2;
+    pibPerCapita2 = (float) pibCard2/populationCard2;
 
     // Área para exibição dos dados da cidade
 
@@ -104,6 +111,8 @@ int main() {
     printf("Área: %.2fkm²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
     printf("PIB: %.2f\n", pibCard1); // Exibe o PIB cadastrado pelo usuário na variavel pibCard1
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1);  // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard1
+    printf("Densidade Populacional: %.2f hab/km²\n", populationDensity1); // Exibe a Densidade Populacional
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1); // Exibe o PIB per Capita
 
     printf("\n\n");
 
@@ -117,6 +126,8 @@ int main() {
     printf("Área: %.2fkm²\n", areaCard2); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard2
     printf("PIB: %.2f\n", pibCard2); // Exibe o PIB cadastrado pelo usuário na variavel pibCard2
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard2); // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard2
+    printf("Densidade Populacional: %.2f hab/km²\n", populationDensity2); // Exibe a Densidade Populacional
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2); // Exibe o PIB per Capita
 
     printf("\n\n");
     
