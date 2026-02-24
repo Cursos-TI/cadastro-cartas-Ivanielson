@@ -153,6 +153,7 @@ int main() {
     printf("Densidade Populacional (%.2f) da carta 1 é menor que Densidade Populacional (%.2f) da carta 2? %i\n", populationDensity1, populationDensity2, populationDensity1 < populationDensity2);
     printf("PIB per Capita (%.2f) da carta 1 é maior que PIB per Capita (%.2f) da carta 2? %i\n", pibPerCapita1, pibPerCapita2, pibPerCapita1 > pibPerCapita2);
     printf("Super Poder (%.2f) da carta 1 é maior que Super Poder (%.2f) da carta 2? %i\n", superPower1, superPower2, superPower1 > superPower2);
+    printf("\n\n");
 
     
     return 0;
