@@ -12,16 +12,20 @@ int main() {
     char stateCard1; // Declara a variável para armazenar o valor de entrada do Estado
     char codeCard1[4]; // Declara a variável para armazenar o valor de entrada do Código
     char cityNameCard1[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
-    int populationCard1, numberOfTouristAttractionsCard1; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
-    float areaCard1, pibCard1, pibPerCapita1, populationDensity1; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional e PIB per Capita
+    int numberOfTouristAttractionsCard1; // Declara as variáveis para armazenar os valores de entrada de Pontos Turísticos
+    unsigned long int populationCard1; // Declara as variáveis para armazenar os valores de entrada da Populaçã
+    float areaCard1, pibCard1, pibPerCapita1, populationDensity1, superPower1; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional, PIB per Capita e super poder
+
 
     //--------------------------------------------------------- Carta 2 ----------------------------------------------------------------------------
 
     char stateCard2; // Declara a variável para armazenar o valor de entrada do Estado
     char codeCard2[4]; // Declara a variável para armazenar o valor de entrada do Código
     char cityNameCard2[100]; // Declara a variável para armazenar o valor de entrada do Nome da Cidade
-    int populationCard2, numberOfTouristAttractionsCard2; // Declara as variáveis para armazenar os valores de entrada da População e Número de Pontos Turísticos
-    float areaCard2, pibCard2, pibPerCapita2, populationDensity2; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional e PIB per Capita
+    int numberOfTouristAttractionsCard2; // Declara as variáveis para armazenar os valores de entrada de Pontos Turísticos
+    unsigned long int populationCard2; // Declara as variáveis para armazenar os valores de entrada da Populaçã
+    float areaCard2, pibCard2, pibPerCapita2, populationDensity2, superPower2; // Declara as variáveis para armazenar os valores de entrada da Área, PIB, Densidade Populacional, PIB per Capita e super poder
+
 
     // Área para entrada de dados
 
@@ -42,7 +46,7 @@ int main() {
 
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel populationCard1
     printf("Informe o número de habitantes da cidade: ");
-    scanf("%i", &populationCard1);
+    scanf("%li", &populationCard1);
 
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel areaCard1
     printf("Informe a área da cidade(km²): ");
@@ -79,7 +83,7 @@ int main() {
 
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel populationCard2
     printf("Informe o número de habitantes da cidade: ");
-    scanf("%i", &populationCard2);
+    scanf("%li", &populationCard2);
 
     // Recebe o valor de entrada informado pelo usuário via console e armazena na variavel areaCard2
     printf("Informe a área da cidade(km²): ");
@@ -107,7 +111,7 @@ int main() {
     printf("Estado: %c\n", stateCard1); // Exibe o Estada cadastrado pelo usuário na variavel stateCard1
     printf("Código: %s\n", codeCard1); // Exibe o Código cadastrado pelo usuário na variavel codeCard1
     printf("Nome da Cidade: %s\n", cityNameCard1); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard1
-    printf("População: %i Habitantes\n", populationCard1); // Exibe a População cadastrado pelo usuário na variavel populationCard1
+    printf("População: %li Habitantes\n", populationCard1); // Exibe a População cadastrado pelo usuário na variavel populationCard1
     printf("Área: %.2fkm²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
     printf("PIB: %.2f\n", pibCard1); // Exibe o PIB cadastrado pelo usuário na variavel pibCard1
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1);  // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard1
@@ -122,7 +126,7 @@ int main() {
     printf("Estado: %c\n", stateCard2); // Exibe o Estada cadastrado pelo usuário na variavel stateCard2
     printf("Código: %s\n", codeCard2); // Exibe o Código cadastrado pelo usuário na variavel codeCard2
     printf("Nome da Cidade: %s\n", cityNameCard2); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard2
-    printf("População: %i Habitantes\n", populationCard2); // Exibe a População cadastrado pelo usuário na variavel populationCard2
+    printf("População: %li Habitantes\n", populationCard2); // Exibe a População cadastrado pelo usuário na variavel populationCard2
     printf("Área: %.2fkm²\n", areaCard2); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard2
     printf("PIB: %.2f\n", pibCard2); // Exibe o PIB cadastrado pelo usuário na variavel pibCard2
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard2); // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard2
@@ -130,6 +134,26 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2); // Exibe o PIB per Capita
 
     printf("\n\n");
+
+    printf("---------------------------------------- Calculando super poder da Carta 1 ------------------------------------------------\n");
+    superPower1 = (numberOfTouristAttractionsCard1+populationCard1+areaCard1+pibCard1+pibPerCapita1+(1/populationDensity1));
+    printf("Carta 1 - Super Poder: %.2f\n", superPower1);
+    printf("\n\n");
+    
+    printf("---------------------------------------- Calculando super poder da Carta 2 ------------------------------------------------\n");
+    superPower2 = (numberOfTouristAttractionsCard2+populationCard2+areaCard2+pibCard2+pibPerCapita2+(1/populationDensity2));
+    printf("Carta 2 - Super Poder: %.2f\n", superPower2);
+    printf("\n\n");
+
+    printf("---------------------------------------- Comparando Cartas ... ------------------------------------------------\n");
+    printf("População (%li) da carta 1 é maior que População (%li) da carta 2? %i\n", populationCard1, populationCard2, populationCard1 > populationCard2);
+    printf("Área (%.2f) da carta 1 é maior que Área (%.2f) da carta 2? %i\n", areaCard1, areaCard2, areaCard1 > areaCard2);
+    printf("PIB (%.2f) da carta 1 é maior que PIB (%.2f) da carta 2? %i\n", pibCard1, pibCard2, pibCard1 > pibCard2);
+    printf("Pontos Turísticos (%i) da carta 1 é maior que Pontos Turísticos (%i) da carta 2? %i\n", numberOfTouristAttractionsCard1, numberOfTouristAttractionsCard2, numberOfTouristAttractionsCard1 > numberOfTouristAttractionsCard2);
+    printf("Densidade Populacional (%.2f) da carta 1 é menor que Densidade Populacional (%.2f) da carta 2? %i\n", populationDensity1, populationDensity2, populationDensity1 < populationDensity2);
+    printf("PIB per Capita (%.2f) da carta 1 é maior que PIB per Capita (%.2f) da carta 2? %i\n", pibPerCapita1, pibPerCapita2, pibPerCapita1 > pibPerCapita2);
+    printf("Super Poder (%.2f) da carta 1 é maior que Super Poder (%.2f) da carta 2? %i\n", superPower1, superPower2, superPower1 > superPower2);
+
     
     return 0;
 } 
