@@ -112,7 +112,7 @@ int main() {
     printf("Código: %s\n", codeCard1); // Exibe o Código cadastrado pelo usuário na variavel codeCard1
     printf("Nome da Cidade: %s\n", cityNameCard1); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard1
     printf("População: %li Habitantes\n", populationCard1); // Exibe a População cadastrado pelo usuário na variavel populationCard1
-    printf("Área: %.2fkm²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
+    printf("Área: %.2f km²\n", areaCard1); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard1
     printf("PIB: %.2f\n", pibCard1); // Exibe o PIB cadastrado pelo usuário na variavel pibCard1
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1);  // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard1
     printf("Densidade Populacional: %.2f hab/km²\n", populationDensity1); // Exibe a Densidade Populacional
@@ -127,7 +127,7 @@ int main() {
     printf("Código: %s\n", codeCard2); // Exibe o Código cadastrado pelo usuário na variavel codeCard2
     printf("Nome da Cidade: %s\n", cityNameCard2); // Exibe o Nome da Cidade cadastrado pelo usuário na variavel cityNameCard2
     printf("População: %li Habitantes\n", populationCard2); // Exibe a População cadastrado pelo usuário na variavel populationCard2
-    printf("Área: %.2fkm²\n", areaCard2); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard2
+    printf("Área: %.2f km²\n", areaCard2); // Exibe a Área(km²) cadastrado pelo usuário na variavel areaCard2
     printf("PIB: %.2f\n", pibCard2); // Exibe o PIB cadastrado pelo usuário na variavel pibCard2
     printf("Número de Pontos Turísticos: %i\n", numberOfTouristAttractionsCard2); // Exibe o Número de Pontos Turísticos cadastrado pelo usuário na variavel numberOfTouristAttractionsCard2
     printf("Densidade Populacional: %.2f hab/km²\n", populationDensity2); // Exibe a Densidade Populacional
@@ -135,25 +135,51 @@ int main() {
 
     printf("\n\n");
 
-    printf("---------------------------------------- Calculando super poder da Carta 1 ------------------------------------------------\n");
+    printf("---------------------------------------- Calculando super poderes ------------------------------------------------\n");
     superPower1 = (numberOfTouristAttractionsCard1+populationCard1+areaCard1+pibCard1+pibPerCapita1+(1/populationDensity1));
     printf("Carta 1 - Super Poder: %.2f\n", superPower1);
-    printf("\n\n");
-    
-    printf("---------------------------------------- Calculando super poder da Carta 2 ------------------------------------------------\n");
+    printf("\n");
     superPower2 = (numberOfTouristAttractionsCard2+populationCard2+areaCard2+pibCard2+pibPerCapita2+(1/populationDensity2));
     printf("Carta 2 - Super Poder: %.2f\n", superPower2);
-    printf("\n\n");
+    printf("\n");
 
     printf("---------------------------------------- Comparando Cartas ... ------------------------------------------------\n");
-    printf("População (%li) da carta 1 é maior que População (%li) da carta 2? %i\n", populationCard1, populationCard2, populationCard1 > populationCard2);
-    printf("Área (%.2f) da carta 1 é maior que Área (%.2f) da carta 2? %i\n", areaCard1, areaCard2, areaCard1 > areaCard2);
-    printf("PIB (%.2f) da carta 1 é maior que PIB (%.2f) da carta 2? %i\n", pibCard1, pibCard2, pibCard1 > pibCard2);
-    printf("Pontos Turísticos (%i) da carta 1 é maior que Pontos Turísticos (%i) da carta 2? %i\n", numberOfTouristAttractionsCard1, numberOfTouristAttractionsCard2, numberOfTouristAttractionsCard1 > numberOfTouristAttractionsCard2);
-    printf("Densidade Populacional (%.2f) da carta 1 é menor que Densidade Populacional (%.2f) da carta 2? %i\n", populationDensity1, populationDensity2, populationDensity1 < populationDensity2);
-    printf("PIB per Capita (%.2f) da carta 1 é maior que PIB per Capita (%.2f) da carta 2? %i\n", pibPerCapita1, pibPerCapita2, pibPerCapita1 > pibPerCapita2);
-    printf("Super Poder (%.2f) da carta 1 é maior que Super Poder (%.2f) da carta 2? %i\n", superPower1, superPower2, superPower1 > superPower2);
-    printf("\n\n");
+
+    if (populationCard1 > populationCard2) {
+        printf("Atributo: População\n\n");
+        printf("Cart 1 - %s: %li\n", cityNameCard1, populationCard1);
+        printf("Cart 2 - %s: %li\n", cityNameCard2, populationCard2);
+        printf("Resultado: Carta 1 (%s) venceu!\n", cityNameCard1);
+    } else {
+        printf("Atributo: População\n\n");
+        printf("Cart 1 - %s: %li\n", cityNameCard1, populationCard1);
+        printf("Cart 2 - %s: %li\n", cityNameCard2, populationCard2);
+        printf("Resultado: Carta 2 (%s) venceu!\n\n", cityNameCard2);
+    }
+
+    if (areaCard1 > areaCard2) {
+        printf("Atributo: Área\n\n");
+        printf("Cart 1 - %s: %.2f\n", cityNameCard1, areaCard1);
+        printf("Cart 2 - %s: %.2f\n", cityNameCard2, areaCard2);
+        printf("Resultado: Carta 1 (%s) venceu!\n\n", cityNameCard1);
+    } else {
+        printf("Atributo: Área\n\n");
+        printf("Cart 1 - %s: %.2f\n", cityNameCard1, areaCard1);
+        printf("Cart 2 - %s: %.2f\n", cityNameCard2, areaCard2);
+        printf("Resultado: Carta 2 (%s) venceu!\n\n", cityNameCard2);
+    }
+    
+    if (pibCard1 > pibCard2) {
+        printf("Atributo: PIB\n\n");
+        printf("Cart 1 - %s: %.2f\n", cityNameCard1, pibCard1);
+        printf("Cart 2 - %s: %.2f\n", cityNameCard2, pibCard2);
+        printf("Resultado: Carta 1 (%s) venceu!\n\n", cityNameCard1);
+    } else {
+        printf("Atributo: PIB\n\n");
+        printf("Cart 1 - %s: %.2f\n", cityNameCard1, pibCard1);
+        printf("Cart 2 - %s: %.2f\n", cityNameCard2, pibCard2);
+        printf("Resultado: Carta 2 (%s) venceu!\n\n", cityNameCard2);
+    }
 
     
     return 0;
