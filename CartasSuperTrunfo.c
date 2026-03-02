@@ -158,11 +158,10 @@ int main() {
     printf("7. Super Poder\n");
     scanf("%u", &option);
 
-    switch (option)
-    {
+    printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
+    switch (option) {
     case 1:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - População: (%li) | Carta 2 - População: (%li)\n", populationCard1, populationCard2);
+        printf("Carta 1 - População: %li Habitantes | Carta 2 - População: %li Habitantes\n", populationCard1, populationCard2);
         if (populationCard1 > populationCard2) {
             printf("Carta 1 Venceu!\n");
         } else if (populationCard1 == populationCard2) {
@@ -172,8 +171,7 @@ int main() {
         }
         break;
     case 2:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - Área: (%.2f) | Carta 2 - Área: (%.2f)\n", areaCard1, areaCard2);
+        printf("Carta 1 - Área: %.2f km² | Carta 2 - Área: %.2f km²\n", areaCard1, areaCard2);
         if (areaCard1 > areaCard2) {
             printf("Carta 1 Venceu!\n");
         } else if (areaCard1 == areaCard2) {
@@ -183,8 +181,7 @@ int main() {
         }
         break;
     case 3:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - PIB: (%.2f) | Carta 2 - PIB: (%.2f)\n", pibCard1, pibCard2);
+        printf("Carta 1 - PIB: %.2f | Carta 2 - PIB: %.2f\n", pibCard1, pibCard2);
         if (pibCard1 > pibCard2) {
             printf("Carta 1 Venceu!\n");
         } else if (pibCard1 == pibCard2) {
@@ -194,8 +191,7 @@ int main() {
         }
         break;
     case 4:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - Pontos Turísticos: (%i) | Carta 2 - Pontos Turísticos: (%i)\n", numberOfTouristAttractionsCard1, numberOfTouristAttractionsCard2);
+        printf("Carta 1 - Pontos Turísticos: %i | Carta 2 - Pontos Turísticos: %i\n", numberOfTouristAttractionsCard1, numberOfTouristAttractionsCard2);
         if (numberOfTouristAttractionsCard1 > numberOfTouristAttractionsCard2) {
             printf("Carta 1 Venceu!\n");
         } else if (numberOfTouristAttractionsCard1 == numberOfTouristAttractionsCard2) {
@@ -205,8 +201,7 @@ int main() {
         }
         break;
     case 5:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - Densidade Populacional: (%.2f) | Carta 2 - Densidade Populacional: (%.2f)\n", populationDensity1, populationDensity2);
+        printf("Carta 1 - Densidade Populacional: %.2f hab/km² | Carta 2 - Densidade Populacional: %.2f hab/km²\n", populationDensity1, populationDensity2);
         if (populationDensity1 < populationDensity2) {
             printf("Carta 1 Venceu!\n");
         } else if (populationDensity1 == populationDensity2) {
@@ -216,8 +211,7 @@ int main() {
         }
         break;
     case 6:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - PIB per Capita: (%.2f) | Carta 2 - PIB per Capita: (%.2f)\n", pibPerCapita1, pibPerCapita2);
+        printf("Carta 1 - PIB per Capita: R$ %.2f | Carta 2 - PIB per Capita: R$ %.2f\n", pibPerCapita1, pibPerCapita2);
         if (pibPerCapita1 > pibPerCapita2) {
             printf("Carta 1 Venceu!\n");
         } else if (pibPerCapita1 == pibPerCapita2) {
@@ -227,8 +221,7 @@ int main() {
         }
         break;
     case 7:
-        printf("Carta 1 - %s | Carta 2 - %s\n", cityNameCard1, cityNameCard2);
-        printf("Carta 1 - Super Poder: (%.2f) | Carta 2 - Super Poder: (%.2f)\n", superPower1, superPower2);
+        printf("Carta 1 - Super Poder: %.2f | Carta 2 - Super Poder: %.2f\n", superPower1, superPower2);
         if (superPower1 > superPower2) {
             printf("Carta 1 Venceu!\n");
         } else if (superPower1 == superPower2) {
